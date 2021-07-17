@@ -21,9 +21,10 @@ heroForm.submit(function (event) {
     // data.response == "success" ? $('#msg-finded').text('SuperHero encontrado:') : $('#msg-finded').text('SuperHero no encontrado.');
     // data.response == "success" ? window.onload = drawGraphHero(data) : $('#chartContainer').text("Oops!, no data available... can't draw graph.");
 
-    if(data.response == "success"){
-      $('#msg-finded').text('SuperHero encontrado:')
-      $('#showcard').addClass('card');
+    if (data.response == "success") {
+      $('#msg-finded').text('SuperHero encontrado:');
+      $('#showcard').addClass("col-md-7 row container");
+      $('#showcard').css({ "border": "1px solid rgba(0,0,0,.125)", "border-radius": ".25rem", "justify-content": "center", "width": "90%" });
       $('hr').removeClass('d-none');
       $('hr').addClass('display');
       drawDataHero(data);
